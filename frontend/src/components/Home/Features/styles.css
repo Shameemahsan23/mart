@@ -1,0 +1,39 @@
+.feature-card-background {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card-background::after {
+  content: "";
+  height: 291px;
+  width: 311px;
+  position: absolute;
+  background-color: rgb(var(--primary-color));
+  border-radius: 0.5rem;
+  transform: translate(33px, -276px) rotate(5deg);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .feature-card-background {
+    position: relative;
+  }
+
+  .feature-card-background::after {
+    content: "";
+    height: 312px;
+    width: 250px;
+    display: inline-block;
+    background-color: rgb(var(--primary-color));
+    border-radius: 0.5rem;
+    transform: translate(35px, -292px) rotate(-5deg);
+    position: absolute;
+    z-index: -1;
+  }
+  .feature-card-background:hover::after {
+    height: 293px;
+    width: 258px;
+    transform: translate(16px, -270px) rotate(-5deg) scaleX(1.1) scaleY(1.1);
+  }
+}

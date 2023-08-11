@@ -1,0 +1,112 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+/* Theme Setup */
+:root {
+  /* background color*/
+  --scheme-based-bg-color: 255, 255, 255;
+  --primary-color: 64, 170, 84;
+  --secondary-color: 242, 255, 245;
+  --options-color: 241, 243, 245;
+  --accent-color: 248, 250, 249;
+  --inverted-color: 67, 71, 104;
+  --hover-color-1: #38964a;
+  --hover-color-2: #a31b1b;
+  /* button text color */
+  --btn-text-primary: #ffffff;
+  --btn-text-secondary: #434768;
+  /* text color */
+  --primary-text-color-: #2f3b34;
+  --secondary-text-color: #6b7280;
+  --accent-text-color: #f3f4f6;
+  --base-text-color: #40aa54; /* primary color of the site */
+  /* text color badge */
+  --label-text-color-1: #40aa54;
+  --label-text-color-2: #ffffff;
+  /* border color */
+  --primary-border-color: #434768;
+  --base-border-color: #40aa54;
+
+  /* Scrollbar */
+  --scrollbarBG: #e8eaf6;
+  --thumbBG: #40aa54;
+}
+/* Tailwind setup */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Button */
+.green-button {
+  @apply btn bg-skin-primary btn-primary text-skin-primary-btn font-display hover:bg-skin-primary flex items-center justify-center font-semibold hover:bg-skin-hover-1 focus:ring-0;
+}
+.red-button {
+  @apply btn bg-red btn-primary text-skin-primary-btn font-display hover:bg-red flex items-center justify-center font-semibold hover:bg-skin-hover-2 focus:ring-0;
+}
+
+.white-button {
+  @apply btn btn-primary border-skin-base  font-display  text-skin-base hover:bg-skin-primary flex border bg-transparent font-semibold hover:border-transparent hover:text-white focus:ring-0;
+}
+.gray-button {
+  @apply btn btn-light-secondary font-display flex items-center font-semibold focus:ring-0;
+}
+
+.green-circle-button {
+  @apply bg-skin-primary flex h-10 w-10 items-center justify-center rounded-full bg-opacity-100 focus:ring-0;
+}
+
+/* Navigation */
+.nav-icon {
+  @apply text-skin-primary hover:text-skin-base hidden xl:block;
+}
+
+/* bottom nav */
+.bottom-nav {
+  @apply text-skin-primary inline-block w-full justify-center pt-2 text-center;
+}
+
+.bottom-nav-icon {
+  @apply mb-1 inline-block h-6 w-6;
+}
+
+/* Text */
+.small-text {
+  @apply text-skin-secondary font-body text-sm tracking-wide;
+}
+
+.label-text {
+  @apply text-skin-base font-display rounded-full px-4 py-2 text-sm font-semibold tracking-wide;
+}
+
+.heading-1 {
+  @apply font-display text-skin-primary mb-5 text-3xl font-extrabold capitalize tracking-normal sm:text-4xl sm:leading-none lg:text-5xl lg:leading-none;
+}
+
+.heading-2 {
+  @apply font-display text-skin-primary pb-2 text-3xl font-bold capitalize leading-none tracking-tight sm:text-4xl lg:text-4xl;
+}
+
+.heading-3 {
+  @apply font-display text-2xl font-bold capitalize leading-none tracking-tight sm:text-4xl lg:text-4xl;
+}
+
+/* Feature */
+.feature-card {
+  @apply flex h-72 transform flex-col rounded-lg border bg-white pt-14 shadow-2xl shadow-[#f2fff5]/50 transition duration-500 hover:scale-110;
+}
+
+/* Category */
+.category-data {
+  @apply bg-skin-secondary mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-opacity-100 sm:h-24 sm:w-24;
+}
+
+/* Form */
+.label {
+  @apply font-body absolute top-3 ml-3 text-sm font-semibold tracking-wide text-gray-500 duration-300;
+}
+
+.form-input {
+  @apply block w-full appearance-none rounded-2xl border-b bg-transparent px-4 py-2 text-base focus:outline-none;
+}
+
